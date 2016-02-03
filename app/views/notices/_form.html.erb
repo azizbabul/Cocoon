@@ -26,11 +26,11 @@
    <div id = "subjects">
   
     <%= f.fields_for :subjects do |task|%>
-      <%= render 'subject_fields', :f=>task%>
+      <%= render 'subject_fields', f: task %>
       <% end %>
       
       
-      <%=link_to_add_association 'add subject', f, :subjects%>
+      <%=link_to_add_association 'add subject', f, :subjects %>
       
        </div>
   <div class="actions">
