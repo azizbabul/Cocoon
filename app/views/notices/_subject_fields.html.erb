@@ -1,0 +1,16 @@
+add your message below
+<div class="nested-fields">
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body%><br>
+    </div>
+    <div class="field">
+     <%= f.radio_button( :mtype, "info")%> Info
+     <%= f.radio_button( :mtype, "success")%> Success
+     <%= f.radio_button( :mtype, "warning")%>warning
+     <%= f.radio_button( :mtype, "alert")%>alert
+     </div>
+    <%= link_to_remove_association "remove task", f%>
+    
+  
+</div>

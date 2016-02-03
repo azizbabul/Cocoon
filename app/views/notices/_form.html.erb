@@ -1,0 +1,39 @@
+<%= form_for(@notice) do |f| %>
+  
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :general %><br>
+    <%= f.check_box :general %>
+  </div>
+  <div class="field">
+    <%= f.label :dept %><br>
+    <%= f.select(:dept,['math','phy','chem','Bio'])%>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.select(:year,['First','Second','Third','Final'])%>
+  </div>
+  <div class="field">
+    <%= f.label :semister %><br>
+    <%= f.select(:semister,['Fall','Winter','Summer'])%>
+  </div>
+  
+  
+   <div id = "subjects">
+  
+    <%= f.fields_for :subjects do |task|%>
+      <%= render 'subject_fields', :f=>task%>
+      <% end %>
+      
+      
+      <%=link_to_add_association 'add subject', f, :subjects%>
+      
+       </div>
+  <div class="actions">
+    <%=f.submit %>
+  </div>
+<% end %>

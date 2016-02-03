@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  general: false
+  dept: MyString
+  year: MyString
+  semister: MyString
+
+two:
+  name: MyString
+  general: false
+  dept: MyString
+  year: MyString
+  semister: MyString
